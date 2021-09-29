@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="form">
+        <form action="mail.php" method="post">
+            <fieldset id="mail">
+                <label for="object">Objet du message</label>
+                <input type="text" required = 'required' id="object" placeholder="Ex : Demande de devis">
 
+                <label for="text">Votre message</label>
+                <textarea id="text" cols="20" rows="20" placeholder="Ex : Bonjour, je voudrais un devis pour un site web"></textarea>
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
