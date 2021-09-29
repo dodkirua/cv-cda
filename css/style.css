@@ -42,11 +42,10 @@ main {
 .icon {
     width: 2vh;
     height: 2vh;
-    margin: 1rem;
 }
 
 #left {
-    background-color: lightgray;
+    background: linear-gradient(to top, #E1DED9,white);
 }
 
 figure > img {
@@ -61,6 +60,7 @@ figure > img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 5%;
 }
 
 .personnality figure {
@@ -74,7 +74,7 @@ section h2 {
     width: 80%;
 }
 
-.personnality ul, .personnality table, .personnality ul li  {
+.personnality ul, .personnality table, .personnality ul li, .icon, dl   {
     margin: 1rem;
 }
 
@@ -87,6 +87,15 @@ section h2 {
     text-align: left;
 }
 
-dt:nth-child(even) {
-    font-weight : bold;
+dl > *{
+    padding: 0.3rem;
+}
+
+dd ul li {
+    margin-left: 1.5rem;
+}
+
+dt:nth-child(even){
+    font-weight: bold;
+    text-transform: uppercase;
 }
