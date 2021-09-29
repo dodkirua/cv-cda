@@ -11,7 +11,7 @@ if (section_array){
         section_array[i].addEventListener('click',section);
 
         function section() {
-            console.log(this.children[0]);
+            console.log(this.children[0].children[0]);
         }
     }
 }
