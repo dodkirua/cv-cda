@@ -12,3 +12,81 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+main , #left, #right {
+    display: flex;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+h1 , h2, h3, h4 {
+    text-transform: uppercase;
+}
+main {
+    width: 100%;
+    flex-direction: row;
+}
+
+#left, #right {
+    flex-direction: column;
+}
+
+#left {
+    width: 35%;
+}
+
+#right {
+    width: 65%;
+}
+
+.icon {
+    width: 2vh;
+    height: 2vh;
+    margin: 1rem;
+}
+
+#left {
+    background-color: lightgray;
+}
+
+figure > img {
+    width: 15vh;
+    border-radius: 50%;
+}
+
+#identity {
+    background-color: #205618;
+    color: #fff;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personnality figure {
+    display: flex;
+    align-items: center;
+}
+
+section h2 {
+    margin: 3rem 0 1rem 0;
+    border-bottom: black solid 1px;
+    width: 80%;
+}
+
+.personnality ul, .personnality table, .personnality ul li  {
+    margin: 1rem;
+}
+
+.personnality ul li {
+    list-style-type: circle;
+}
+
+.personnality table tbody tr th, .personnality table tbody tr td{
+    padding:  1rem;
+    text-align: left;
+}
+
+dt:nth-child(even) {
+    font-weight : bold;
+}
