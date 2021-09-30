@@ -1,0 +1,7 @@
+.main_mail {
+    width: 100%;
+}
+fieldset{
+    display: flex;
+    flex-direction: row;
+}

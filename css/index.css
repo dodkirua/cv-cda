@@ -1,0 +1,78 @@
+
+#left, #right {
+    flex-direction: column;
+}
+
+#left {
+    width: 35%;
+}
+
+#right {
+    width: 65%;
+}
+
+.icon {
+    width: 2vh;
+    height: 2vh;
+}
+
+#left {
+    background: linear-gradient(to top, #E1DED9,white);
+}
+
+figure > img {
+    width: 15vh;
+    border-radius: 50%;
+}
+
+#identity {
+    background-color: #205618;
+    color: #fff;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5%;
+}
+
+.personnality figure {
+    display: flex;
+    align-items: center;
+}
+
+section h2 {
+    margin: 3rem 0 1rem 0;
+    border-bottom: black solid 1px;
+    width: 80%;
+}
+
+.personnality ul, .personnality table, .personnality ul li, .icon, dl   {
+    margin: 1rem;
+}
+
+.personnality ul li {
+    list-style-type: circle;
+}
+
+.personnality table tbody tr th, .personnality table tbody tr td{
+    padding:  1rem;
+    text-align: left;
+}
+
+dl > *{
+    padding: 0.3rem;
+}
+
+dd ul li {
+    margin-left: 1.5rem;
+}
+
+
+
+/*
+a revoir
+ */
+dt:nth-child(even){
+    font-weight: bold;
+    text-transform: uppercase;
+}
