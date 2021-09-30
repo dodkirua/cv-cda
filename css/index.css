@@ -76,3 +76,46 @@ dt:nth-child(even){
     font-weight: bold;
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 800px) {
+    h1 {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    main {
+        margin : 0;
+        font-size: 0.8rem;
+    }
+
+    #left, #right {
+        margin: 0;
+    }
+
+    figure > img {
+        width: 10vh;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 0.9rem;
+    }
+
+    h3 {
+        font-size: 0.8rem;
+    }
+
+    .personnality table {
+        margin: 0;
+    }
+
+    .personnality table tbody tr th, .personnality table tbody tr td {
+        padding: 0.2rem;
+    }
+}
