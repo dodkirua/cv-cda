@@ -6,26 +6,26 @@
       "Develloppeur Web  et Web Mobile",
       "Upto"
     ],
-    {
-      "date": "septembre 2009 - mai 2010",
-      "lieu" :"La Bassée, France",
-      "diplôme" :"Brevet d'état d'éducateurs Sportif option judo Ju-jitsu",
-      "organisme" :"Ligue Haut de france de judo"
-    },
-    {
-      "date": "septembre 2006 - juin 2009",
-      "lieu" :"Maubeuge, France",
-      "diplôme" :"DUT informatique",
-      "organisme" :"Université de Valenciennes et Hainaut-Cambrésis (université polytechnique Haut-de-France)"
-    }
+    [
+      "septembre 2009 - mai 2010",
+      "La Bassée, France",
+      "Brevet d'état d'éducateurs Sportif option judo Ju-jitsu",
+      "Ligue Haut de france de judo"
+    ],
+    [
+      "septembre 2006 - juin 2009",
+      "Maubeuge, France",
+      "DUT informatique",
+      "Université de Valenciennes et Hainaut-Cambrésis (université polytechnique Haut-de-France)"
+    ]
   ],
   "experiences": [
     {
       "date": "Octobre 2016 - aout 2018",
       "lieu" : "Anor, France",
-      "société" : "Aciérie et Forge d'Anor",
-      " Poste: ": {
-        "intitulé" : "Responsable informatique et gestion de production",
+      "entreprise" : "Aciérie et Forge d'Anor",
+      "poste": {
+        "intitule" : "Responsable informatique et gestion de production",
         "tache": [
           "Maintenance du parc informatique",
           "Ordonnecement de la production",
@@ -37,9 +37,9 @@
     {
       "date": "Novembre 2009 - aout 2015",
       "lieu" : "Fourmies, France",
-      "société" : "Lycée Camille Claudel",
-      " Poste: ": {
-        "intitulé" : "Assistant d'éducation",
+      "entreprise" : "Lycée Camille Claudel",
+      "poste": {
+        "intitule" : "Assistant d'éducation",
         "tache": [
           "surveillance des élèves",
           "Gestion de l'internat"
@@ -49,9 +49,9 @@
     {
       "date": "Septembre 2012 - aout 2014",
       "lieu" : "Sains du Nord, France",
-      "société" : "College Jean Rostand",
-      " Poste: ": {
-        "intitulé" : "Assistant d'éducation TICE",
+      "entreprise" : "College Jean Rostand",
+      "poste": {
+        "intitule" : "Assistant d'éducation TICE",
         "tache": [
           "surveillance des élèves",
           "Gestion du parc informatique"
@@ -61,9 +61,9 @@
     {
       "date": "Février 2002 - juillet 2005",
       "lieu" : "Anor, France",
-      "société" : "Mairie d'Anor",
-      " Poste: ": {
-        "intitulé" : "Animateur Jeunes et responsable espace multimédia",
+      "entreprise" : "Mairie d'Anor",
+      "poste": {
+        "intitule" : "Animateur Jeunes et responsable espace multimédia",
         "tache": [
           "Animé le secteur ado de la ville",
           "Gérer et maintenir l'espace multimedia",

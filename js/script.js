@@ -90,9 +90,10 @@ if (label_array){
         }
     }
     let section_formation = document.querySelector("#formation");
-
+    let section_pro = document.querySelector("#professional");
     let dl_formation = section_formation.children[1];
-    /*fetch("../json/data.json")
+    let dl_pro = section_pro.children[1];
+    fetch("../json/data.json")
         .then(resp => resp.json())
         .then(json => {
             for(let formation of json["formation"]){
@@ -107,10 +108,29 @@ if (label_array){
                 }
 
             }
-            /!*for(let coord of json["coord"]){
-                let li = document.createElement("li");
-                li.innerHTML = coord;
-                coord_elem.appendChild(li);
-            }*!/
-        });*/
+            for(let exp of json["experiences"]){
+                console.log(exp["poste"]["tache"]);
+                let date = document.createElement("dt");
+                let place = document.createElement("dd");
+                let enterprise = document.createElement("dt");
+                let task = document.createElement("dd");
+                let span = document.createElement("span");
+                let ul = document.createElement("ul");
+                date.innerHTML = exp["date"];
+                place.innerHTML = exp["lieu"];
+                enterprise.innerHTML = exp["entreprise"];
+                span.innerHTML = exp["poste"]["intitule"];
+                for (let tsk of exp["poste"]["tache"]){
+                    let li = document.createElement("li");
+                    li.innerHTML = tsk;
+                    ul.append(li);
+                }
+                dl_pro.append(date);
+                dl_pro.append(place);
+                dl_pro.append(enterprise);
+                task.append(span);
+                task.append(ul);
+                dl_pro.append(task);
+            }
+        });
 }
