@@ -1,11 +1,11 @@
 {
-  "Formation" :  [
-    {
-      "date": "Oct 2020 - juin 2021",
-      "lieu" : "Fourmies, France",
-      "diplôme" : "Develloppeur Web  et Web Mobile",
-      "organisme" : "Upto"
-    },
+  "formation" :  [
+    [
+      "Oct 2020 - juin 2021",
+      "Fourmies, France",
+      "Develloppeur Web  et Web Mobile",
+      "Upto"
+    ],
     {
       "date": "septembre 2009 - mai 2010",
       "lieu" :"La Bassée, France",
@@ -19,7 +19,7 @@
       "organisme" :"Université de Valenciennes et Hainaut-Cambrésis (université polytechnique Haut-de-France)"
     }
   ],
-  "Experiences": [
+  "experiences": [
     {
       "date": "Octobre 2016 - aout 2018",
       "lieu" : "Anor, France",

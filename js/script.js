@@ -89,7 +89,28 @@ if (label_array){
             label.children[sp_nb2].style.color = "#" + random_color();
         }
     }
+    let section_formation = document.querySelector("#formation");
 
+    let dl_formation = section_formation.children[1];
+    /*fetch("../json/data.json")
+        .then(resp => resp.json())
+        .then(json => {
+            for(let formation of json["formation"]){
+                for (let i = 0 ; i < 4 ; i++) {
+                    let dt = document.createElement("dt");
+                    dt.innerHTML = formation[i];
+                    let dd = document.createElement("dd");
+                    i++;
+                    dd.innerHTML = formation[i];
+                    dl_formation.appendChild(dt);
+                    dl_formation.appendChild(dd);
+                }
 
-
+            }
+            /!*for(let coord of json["coord"]){
+                let li = document.createElement("li");
+                li.innerHTML = coord;
+                coord_elem.appendChild(li);
+            }*!/
+        });*/
 }
