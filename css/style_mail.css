@@ -29,3 +29,8 @@ textarea {
 input::placeholder, textarea::placeholder {
     color: darkgray;
 }
+
+.sp{
+    font-style: italic;
+    font-size: 2rem;
+}

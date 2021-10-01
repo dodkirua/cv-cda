@@ -6,22 +6,30 @@
     <meta name="google" value="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_mail.css">
 </head>
 <body>
+<main id="main_mail">
     <nav>
         <a href="index.html">retour</a>
     </nav>
-    <p>Voici le formulaire pour me contacter</p>
-    <div id="form">
-        <form method="post">
-            <fieldset id="mail">
-                <label for="object">Objet du message</label>
-                <input type="text" required = 'required' id="object" placeholder="Ex : Demande de devis">
+    <section>
+        <p>Voici le formulaire pour me contacter</p>
+        <aside id="form">
+            <form method="post">
+                <fieldset id="object_field">
+                    <label for="object">Objet du message</label>
+                    <input type="text" required = 'required' id="object" placeholder="Ex : Demande de devis">
+                </fieldset>
+                <fieldset id="text_field">
+                    <label for="text">Votre message</label>
+                    <textarea id="text" placeholder="Ex : Bonjour, je voudrais un devis pour un site web"></textarea>
+                </fieldset>
+            </form>
+        </aside>
+    </section>
 
-                <label for="text">Votre message</label>
-                <textarea id="text" cols="20" rows="20" placeholder="Ex : Bonjour, je voudrais un devis pour un site web"></textarea>
-            </fieldset>
-        </form>
-    </div>
+</main>
+<script src = "/js/script.js" type="module"></script>
 </body>
 </html>
