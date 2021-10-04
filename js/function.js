@@ -31,161 +31,169 @@ export function random_color() {
 }
 
 /*
+let h1 = document.querySelector("h1");
 
-let h1 = document.querySelectorAll("h1");
+// Increase text size + rotate
+setTimeout(function () {
+    h1.style.fontSize = "120px";
+    h1.style.backgroundColor = "white";
+    h1.style.border = "3px dashed black";
+    h1.style.padding = "15px";
+    h1.style.position = "absolute"
+    h1.style.top = "50%";
+    h1.style.left = "50%";
+    h1.style.transform = 'rotate(20deg)';
+}, 0);
+setTimeout(function () {
+    h1.style.position = "relative";
+    h1.style.border = "none";
+    h1.style.top = "initial";
+    h1.style.left = "initial";
+    h1.style.backgroundColor = "white";
+    h1.style.padding = "0";
+    h1.style.transform = 'rotate(0deg)';
+    h1.style.fontSize = "50px";
+}, 1000);
+
 let h2 = document.querySelectorAll("h2");
-let section = document.querySelectorAll("section");
-let label = document.querySelectorAll("label");
-let fig = document.querySelector("#fig");
-fig.dataset.run = "false";
-fig.dataset.action = "false";
-let comp_elem = document.querySelector("#comp dl")
-let coord_elem = document.querySelector("#coord ul")
 
-for(let elem of h1){
-    const fullName = elem.innerHTML;
-    elem.innerHTML = elem.innerHTML[0];
-    let index = 1;
-    let interval = () => window.setTimeout(() => {
-        elem.innerHTML += fullName[index];
-        index++;
-        if(index >= fullName.length){
-            anim_h2();
-            return true;
-        }
-        interval();
-    },100)
-    interval();
+for (let i = 0; i < h2.length; i++) {
+    setInterval(function () {
+        h2[i].style.fontWeight = "bold"
+        h2[i].style.textShadow = "3px 3px 4px #216ed3";
+    }, 2000);
+
+    setInterval(function () {
+        h2[i].style.fontWeight = "normal"
+        h2[i].style.textShadow = "0 0 0 white";
+    }, 6000);
 }
 
-let anim_h2 = () => {
-    for(let elem of h2){
-        const letterList = elem.innerHTML.split("");
-        elem.innerHTML = "";
-        let x = Math.random();
-        for(let letter of letterList){
-            let span = document.createElement("span");
-            span.innerHTML = letter;
-            elem.appendChild(span);
-            let interval = (pos) => window.setTimeout(() => {
-                span.style.opacity = (Math.abs(Math.cos(pos) * 100)).toString() + "%";
-                pos += 0.009;
-                interval(pos);
-            },20);
-            interval(x);
-            x+=0.1;
+let h3 = document.querySelectorAll("h3");
+
+for (let i = 0; i < h3.length; i++) {
+    setInterval(function () {
+        h3[i].style.textDecoration = "none"
+        h3[i].style.opacity = "0.5";
+        h3[i].style.backgroundColor = "black";
+    }, 2000);
+
+    setInterval(function () {
+        h3[i].style.textDecoration = "underline"
+        h3[i].style.opacity = "1";
+        h3[i].style.backgroundColor = "transparent";
+    }, 6000);
+}
+
+if (document.getElementById("details1") && document.getElementById("details2")) {
+    nbClick("details1", "section1");
+    nbClick("details2", "section2");
+}
+
+let figure  = document.querySelector("figure");
+let figCaption  = document.querySelector("figcaption");
+if (figure && figCaption) {
+    // add a class
+    figure.classList = "figure";
+    figCaption.classList = "figCaption";
+    document.getElementById("div1").classList = "card-container";
+    document.getElementById("div2").classList = "card";
+    document.getElementById("div3").classList = "card-front";
+    document.getElementById("div4").classList = "card-back";
+    let fig2 = document.querySelectorAll("figcaption");
+    fig2[1].classList = "figcaption2";
+}
+
+// Retrieve a json file and display its content in HTML
+let xhr2 = new XMLHttpRequest();
+xhr2.open("GET", "first.json");
+xhr2.responseType = "json";
+
+xhr2.onload = function () {
+    let response = xhr2.response;
+
+    let createUl = document.createElement("ul");
+    let first =  document.getElementById("first");
+    first.prepend(createUl);
+
+    for (let i = 0; i < response.length; i++) {
+        let createLi = document.createElement("li");
+        createLi.innerHTML = response[i];
+        createUl.append(createLi);
+    }
+}
+xhr2.send();
+
+
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "second.json");
+xhr.responseType = "json";
+
+xhr.onload = function () {
+    let response = xhr.response;
+
+    let createDl = document.createElement("dl");
+    let second =  document.getElementById("second");
+    second.prepend(createDl);
+
+    for (let i = 0; i < response.length; i++) {
+        let createDt = document.createElement("dt");
+        createDt.innerHTML = response[i][0];
+        createDl.append(createDt);
+        let createDd = document.createElement("dd");
+        createDd.innerHTML = response[i][1];
+        createDl.append(createDd);
+        if (createDd.innerHTML === response[3][1]) {
+            let createA = document.createElement("a");
+            createA.href = "https://github.com/ChloeArd";
+            createA.innerHTML = response[3][1];
+            let dd = document.querySelectorAll("dd");
+            dd[3].innerHTML = "";
+            dd[3].append(createA);
+        }
+    }
+}
+xhr.send();
+
+let span = document.querySelectorAll("span");
+if (span) {
+    // each letter changes color and font style when hovering the mouse over a label
+    let color = ['blue', 'red', 'yellow', 'orange', 'green', 'black', 'brown', 'gray', 'brown', 'blueviolet', 'coral', 'pink'];
+    let font = ['bold', 'normal'];
+
+    document.getElementById("label1").addEventListener("mouseover",letterColorAndFont);
+    document.getElementById("label2").addEventListener("mouseover",letterColorAndFont);
+    document.getElementById("label3").addEventListener("mouseover",letterColorAndFont);
+    document.getElementById("label4").addEventListener("mouseover",letterColorAndFont);
+
+    function letterColorAndFont () {
+        let time = 500;
+        for (let x = 0; x < span.length; x++) {
+            setTimeout(function () {
+                randomColor = color[Math.floor(Math.random() * color.length)];
+                randomFont = font[Math.floor(Math.random() * font.length)];
+                span[x].style.color = randomColor;
+                span[x].style.fontWeight = randomFont;
+                span[x].style.fontStyle = "italic";
+                span[x].style.fontSize = "25px";
+                console.log(span[x]);
+            }, time);
+            time = time + 500;
         }
     }
 }
 
-for(let elem of section){
-    let arrow = document.createElement("h3");
-    arrow.innerHTML = "<i class='fas fa-arrow-right'></i>";
-    elem.appendChild(arrow);
-    let elemTitle = elem.getElementsByTagName("h2")[0];
-    if(elemTitle){
-        const content = elem.parentNode.querySelectorAll("section > *:not(h2, h3)")[0];
-        elem.innerHTML = "";
-        elem.appendChild(elemTitle);
-        elem.dataset.show = "false";
-        elem.addEventListener("click", () => {
-            if(elem.dataset.show === "false"){
-                elem.appendChild(content);
-                elem.dataset.show = "true";
-            }
-            else{
-                elem.innerHTML = "";
-                elem.appendChild(elemTitle);
-                elem.dataset.show = "false";
-            }
-        })
-    }
-
-
-}
-
-for(let elem of label){
-    const letterList = elem.innerHTML.split("");
-    elem.innerHTML = "";
-    let x = Math.random();
-    for(let letter of letterList){
-        let span = document.createElement("span");
-        span.innerHTML = letter;
-        elem.appendChild(span);
-        let interval = (pos) => window.setTimeout(() => {
-            span.style.color = "rgb(" + (Math.abs(Math.cos(pos) * 255)).toString() + "," +   + (Math.abs(Math.sin(pos) * 255)).toString() + "," +  + (Math.abs(Math.cos(pos) * 100)).toString() + ")";
-            pos += 0.1;
-            interval(pos);
-        },20);
-        interval(x);
-        x+=0.1;
-    }
-}
-
-fig.addEventListener("mouseover", () => {
-    let front = fig.querySelector("#front");
-    if(fig.dataset.run === "false"){
-        if(fig.dataset.action === "false"){
-            fig.dataset.action = "true";
-            fig.dataset.run = "true";
-            let interval = (deg) => {
-                window.setTimeout(() => {
-                    fig.style.transform = "rotateY(" + deg + "deg)";
-                    deg ++;
-                    if(deg < 90){
-                        front.style.zIndex = "-1";
-                    }
-                    if(deg < 180){
-                        interval(deg);
-                    }
-                    else{
-                        fig.dataset.run = "false";
-                    }
-                },10)
-            }
-            interval(0);
-
+function nbClick(id1, id2) {
+    let click = 0;
+    document.getElementById(id1).addEventListener("click", function () {
+        if (click === 0) {
+            document.getElementById(id2).style.display = "none";
+            click++;
         }
-        else{
-            fig.dataset.action = "false";
-            fig.dataset.run = "true";
-            let interval = (deg) => {
-                window.setTimeout(() => {
-                    fig.style.transform = "rotateY(" + deg + "deg)";
-                    deg --;
-                    if(deg < 90) {
-                        front.style.zIndex = "1";
-                    }
-                    if(deg > 0){
-                        interval(deg);
-                    }
-                    else{
-                        fig.dataset.run = "false";
-                    }
-                },10)
-            }
-            interval(180);
+        else {
+            document.getElementById(id2).style.display = "flex";
+            click = 0;
         }
-    }
-
-
-})
-
-fetch("comp.json")
-.then(resp => resp.json())
-.then(json => {
-    for(let comp of json["comp"]){
-        let dt = document.createElement("dt");
-        dt.innerHTML = comp[0];
-        let dd = document.createElement("dd");
-        dd.innerHTML = comp[1];
-        comp_elem.appendChild(dt);
-        comp_elem.appendChild(dd);
-    }
-    for(let coord of json["coord"]){
-        let li = document.createElement("li");
-        li.innerHTML = coord;
-        coord_elem.appendChild(li);
-    }
-});
+    });
+}
  */

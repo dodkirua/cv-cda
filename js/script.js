@@ -1,11 +1,82 @@
 import {Label_change} from "./Label_change.js";
 import {random_color} from "./function.js";
-//let h1 = document.querySelector("h1");
 
-let section_array = document.querySelectorAll('.section_select');
+/*
+ balise h1
+ */
+
+let h1 = document.querySelectorAll("h1");
+
+for (let title of h1) {
+    let nb_rand=Math.ceil((Math.random() * 10) + 2);
+    for (let i = 0 ; i < nb_rand ; i++){
+        setTimeout(change_h1,500,title);
+    }
+
+}
+
+function change_h1(dom) {
+    dom.style.color = "#" + random_color();
+}
+
+function random_font() {
+    let nb_rand = Math.ceil((Math.random() * 10));
+    let font = "";
+    switch (nb_rand) {
+        case 0 :
+            font = "Arial";
+            break;
+        case 1 :
+            font = "Vemana2000";
+            break;
+        case 2 :
+            font = "Caladea";
+            break;
+        case 3 :
+            font = "FreeMono";
+            break;
+        case 4 :
+            font = "Norasi";
+            break;
+        case 5 :
+            font = "Jamrul";
+            break;
+        case 6 :
+            font = "Padauk";
+            break;
+        case 7 :
+            font = "Rasa";
+            break;
+        case 8 :
+            font = "\"Liberation Mono\"";
+            break;
+        case 9 :
+            font = "KacstQurn";
+            break;
+        default :
+            font = "\"URW Gothic\"";
+            break;
+    }
+
+    font += ", sans-serif";
+    return font;
+}
+
+
+function clear_anim(anim){
+    clearInterval(anim);
+}
+
+
+
+
+
+
+
 /*
 * mise en place du rabattement des sections
 */
+let section_array = document.querySelectorAll('.section_select');
 if (section_array){
     for (let i = 0 ; i < section_array.length; i++){
         //console.log(i);
@@ -89,6 +160,12 @@ if (label_array){
             label.children[sp_nb2].style.color = "#" + random_color();
         }
     }
+
+
+    /*
+    * json
+    */
+
     let section_formation = document.querySelector("#formation");
     let section_pro = document.querySelector("#professional");
     let dl_formation = section_formation.children[1];
