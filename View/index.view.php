@@ -1,0 +1,139 @@
+<div id="left">
+    <section id="identity">
+        <figure>
+            <img src="/assets/img/id-old.png" alt="id">
+        </figure>
+        <h1>Pierre-Yves Bouttefeux</h1>
+        <h3>Developer</h3>
+    </section>
+
+    <section id="profil" class="personnality">
+        <h2>Profil</h2>
+        <figure>
+            <img src="/assets/img/position.png" alt="address" class="icon">
+            <figcaption>35 rue du saura pas, 6969 PasenREve, France</figcaption>
+        </figure>
+        <figure>
+            <img src="/assets/img/mail.png" alt="mail" class="icon">
+            <figcaption><a href="/mail.php">Me contacter</a></figcaption>
+        </figure>
+        <figure>
+            <img src="/assets/img/phone.png" alt="phone" class="icon">
+            <figcaption>-330648985565</figcaption>
+        </figure>
+    </section>
+
+    <section id="interest" class="personnality">
+        <h2>Interêts</h2>
+        <ul>
+            <li>Lecture</li>
+            <li>Cinéma</li>
+            <li>Jeux (sociétés, rôles, videos</li>
+            <li>sport (Judo)</li>
+            <li>Bénevole dans plusieurs associations</li>
+        </ul>
+    </section>
+
+    <section id="language" class="personnality">
+        <h2>Langues</h2>
+        <table>
+            <tr>
+                <th>Anglais</th>
+                <td>Technique</td>
+            </tr>
+            <tr>
+                <th>Espagnol</th>
+                <td>Notion</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section id="competence" class="personnality">
+        <h2>Compétences</h2>
+        <ul>
+            <li>HTML et CSS</li>
+            <li>JavaScript</li>
+            <li>PhP</li>
+            <li>SQL</li>
+            <li>Maintenance informatique</li>
+        </ul>
+    </section>
+</div>
+
+<div id="right">
+    <section id="formation" class="career">
+        <h2>Formation</h2>
+        <dl class="dd">
+            <dt>Oct 2020 - juin 2021</dt>
+            <dd>Fourmies, France</dd>
+            <dt>Develloppeur Web  et Web Mobile</dt>
+            <dd>Upto</dd>
+
+            <dt>septembre 2009 - mai 2010</dt>
+            <dd>La Bassée, France</dd>
+            <dt>Brevet d'état d'éducateurs Sportif option judo Ju-jitsu</dt>
+            <dd>Ligue Haut de france de judo</dd>
+
+            <dt>septembre 2006 - juin 2009</dt>
+            <dd>Maubeuge, France</dd>
+            <dt>DUT informatique</dt>
+            <dd>Université valenciennes et Hainaut-Cambrésie (univerdité polytechnique Haut-de-France)</dd>
+
+        </dl>
+    </section>
+
+    <section id="professional" class="career">
+        <h2>Experiences</h2>
+        <dl class="dd">
+            <dt>Octobre 2016 - Aout 2018</dt>
+            <dd>Anor, France</dd>
+            <dt>Acièrie et Forge d'Anor</dt>
+            <dd>
+                <span>Responsable informatique et gestion de production</span>
+                <ul>
+                    <li>Maintenance du parc informatique</li>
+                    <li>Ordonnecement de la production</li>
+                    <li>Suivi de la production</li>
+                    <li>Gestion expedition</li>
+                </ul>
+            </dd>
+
+            <dt>Novembre 2009 - Aout 2015</dt>
+            <dd>Fourmies, France</dd>
+            <dt>Lycée Camille Claudel</dt>
+            <dd>
+                <span>Assistant d'éducation</span>
+                <ul>
+                    <li>surveillance des éléves</li>
+                    <li>Gestion de l'internat</li>
+                </ul>
+            </dd>
+
+            <dt>Septembre 2012 - Aout 2014</dt>
+            <dd>Sains du Nord, France</dd>
+            <dt>College Jean Rostand</dt>
+            <dd>
+                <span>Assistant d'éducation TICE</span>
+                <ul>
+                    <li>surveillance des éléves</li>
+                    <li>Gestion du parc informatique</li>
+                </ul>
+            </dd>
+
+            <dt>Fevrier 2002 - Juillet 2005</dt>
+            <dd>Anor, France</dd>
+            <dt>Mairie d'Anor</dt>
+            <dd>
+                <span>Animateur Jeunes et responsable espace multimédia</span>
+                <ul>
+                    <li>Animé le secteur ado de la ville</li>
+                    <li>Gérer et maintenir l'espace multimedia</li>
+                    <li>Former à l'outil informatique</li>
+                </ul>
+            </dd>
+
+        </dl>
+    </section>
+</div>
