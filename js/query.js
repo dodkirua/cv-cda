@@ -13,9 +13,11 @@ $(document).ready(function() {
     }
 );
 
+/**
+ * section
+ */
 $(document).ready(function(){
     $('.section_select').click(function(){
-
         if ($(this).children('div').css('display') === 'block'){
             $(this).children('h2').children('span').html('&#8595; ');
             $(this).children('div').hide();
@@ -24,6 +26,21 @@ $(document).ready(function(){
             $(this).children('h2').children('span').html('&#8594; ');
             $(this).children('div').show()
         }
-    })
-
+    });
+    $('a').click(function (e){
+        e.stopPropagation();
+    });
 });
+/*
+
+/!**
+ * label
+ *!/
+$(document).ready(function (){
+    let message_tmp;
+    $('label').mouseover(function (){
+        //console.log($(this).html());
+
+
+    });
+});*/
