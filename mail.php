@@ -5,13 +5,13 @@
     <title>Mail</title>
     <meta name="google" value="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_mail.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style_mail.css">
 </head>
 <body>
     <main id="main_mail">
         <nav>
-            <a href="index.html">retour</a>
+            <a href="index.php">retour</a>
         </nav>
         <section>
             <p>Voici le formulaire pour me contacter</p>

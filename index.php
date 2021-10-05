@@ -5,15 +5,15 @@
     <title>Mon CV</title>
     <meta name="google" value="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
     <main>
         <div id="left">
             <section id="identity">
                 <figure>
-                    <img src="/img/id-old.png" alt="id">
+                    <img src="/assets/img/id-old.png" alt="id">
                 </figure>
                 <h1>Pierre-Yves Bouttefeux</h1>
                 <h3>Developer</h3>
@@ -22,15 +22,15 @@
             <section id="profil" class="personnality">
                 <h2>Profil</h2>
                 <figure>
-                    <img src="/img/position.png" alt="address" class="icon">
+                    <img src="/assets/img/position.png" alt="address" class="icon">
                     <figcaption>35 rue du saura pas, 6969 PasenREve, France</figcaption>
                 </figure>
                 <figure>
-                    <img src="/img/mail.png" alt="mail" class="icon">
-                    <figcaption><a href="/mail.html">Me contacter</a></figcaption>
+                    <img src="/assets/img/mail.png" alt="mail" class="icon">
+                    <figcaption><a href="/mail.php">Me contacter</a></figcaption>
                 </figure>
                 <figure>
-                    <img src="/img/phone.png" alt="phone" class="icon">
+                    <img src="/assets/img/phone.png" alt="phone" class="icon">
                     <figcaption>-330648985565</figcaption>
                 </figure>
             </section>
