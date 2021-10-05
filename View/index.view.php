@@ -15,7 +15,7 @@
         </figure>
         <figure>
             <img src="/assets/img/mail.png" alt="mail" class="icon">
-            <figcaption><a href="/mail.php">Me contacter</a></figcaption>
+            <figcaption><a href="/index.php?ctrl=mail">Me contacter</a></figcaption>
         </figure>
         <figure>
             <img src="/assets/img/phone.png" alt="phone" class="icon">

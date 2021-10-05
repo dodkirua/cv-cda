@@ -1,18 +1,15 @@
 <?php
 
-
 namespace Controller\Classes;
 
-
-class IndexController extends Controller{
+class MailController extends Controller{
 
     /**
-     * display the index page
+     * display the connect page
      * @param array|null $var
      */
     public static function display(array $var = null) : void{
-
-        self::render('index','Accueil',$var);
+        $var['css'] = 'style_mail';
+        self::render('mail','Contact',$var);
     }
-
 }
